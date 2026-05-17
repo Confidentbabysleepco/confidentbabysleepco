@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chelsea's Recommendations — Confident Baby Sleep Co.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #FAF7F2;
+    --warm-white: #FDF9F4;
+    --tc: #C4714A;
+    --tcl: #F0E0D4;
+    --sg: #7A9E7E;
+    --sgl: #EEF3EE;
+    --gd: #B8922A;
+    --gdl: #F5EDD6;
+    --dk: #2C2420;
+    --md: #6B5A52;
+    --lt: #9C8880;
+    --bd: #E8DDD6;
+    --am: #D4771A;
+    --aml: #FDEBD0;
+    --pu: #6B5B8E;
+    --pul: #EEEAF5;
+    --blush: #F5EAE4;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dk);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .site-header {
+    background: linear-gradient(135deg, var(--dk), #4A3428, var(--tc));
+    padding: 40px 40px 30px;
+    text-align: center;
+  }
+  .site-header .tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 8px;
+  }
+  .site-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .site-header h1 em { font-style: italic; color: #F0E0D4; }
+  .site-header p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 16px;
+    line-height: 1.6;
+  }
+  .affiliate-note {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* MAIN */
+  .main { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+  /* CATEGORY */
+  .category { margin-bottom: 48px; }
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--bd);
+  }
+  .category-emoji { font-size: 28px; }
+  .category-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--dk);
+  }
+  .category-count {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--lt);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* PRODUCT CARD */
+  .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .product-card {
+    background: var(--warm-white);
+    border: 1px solid var(--bd);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .product-card:hover { box-shadow: 0 4px 20px rgba(44,36,32,0.08); }
+  .product-card-top {
+    padding: 16px 16px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .product-badge {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .product-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dk);
+    line-height: 1.4;
+    flex: 1;
+  }
+  .product-body { padding: 10px 16px 16px; }
+  .chelsea-says {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--md);
+    line-height: 1.5;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 2px solid var(--tc);
+  }
+  .must-have {
+    display: inline-block;
+    background: var(--tc);
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .must-have.sg { background: var(--sg); }
+  .must-have.gd { background: var(--gd); }
+  .must-have.pu { background: var(--pu); }
+  .must-have.am { background: var(--am); }
+  .buy-btn {
+    display: block;
+    background: var(--tc);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+  .buy-btn:hover { background: #A85D3A; }
+  .buy-btn.sg { background: var(--sg); }
+  .buy-btn.sg:hover { background: #6A8E6E; }
+  .buy-btn.gd { background: var(--gd); }
+  .buy-btn.pu { background: var(--pu); }
+  .buy-btn.am { background: var(--am); }
+
+  /* NIGHT MUST HAVES BOX */
+  .night-box {
+    background: var(--dk);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 48px;
+    color: white;
+  }
+  .night-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 6px;
+  }
+  .night-box h2 em { font-style: italic; color: #F0E0D4; }
+  .night-box p { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 16px; }
+  .night-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .night-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+  }
+  .night-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--tc); flex-shrink: 0; }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--dk);
+    padding: 30px 40px;
+    text-align: center;
+  }
+  .site-footer p { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.8; }
+  .site-footer a { color: rgba(255,255,255,0.6); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="site-header">
+  <p class="tag">Confident Baby Sleep Co. · Chelsea Tudhope</p>
+  <h1>Chelsea's <em>Recommendations</em></h1>
+  <p>Products I personally use with every family I support — tried, tested and trusted. Everything here is chosen for safety, quality and practicality in those early weeks.</p>
+  <span class="affiliate-note">* Some links are affiliate links. I only recommend products I genuinely use and believe in.</span>
+</div>
+
+<div class="main">
+
+  <!-- FIRST NIGHT MUST HAVES -->
+  <div class="night-box">
+    <h2>First Night <em>Must Haves</em> 🌙</h2>
+    <p>Before anything else — make sure you have these ready for the first night home.</p>
+    <div class="night-list">
+      <div class="night-item"><span class="night-dot"></span>Muslin cloths — have them everywhere</div>
+      <div class="night-item"><span class="night-dot"></span>Feeding supplies — breast or bottle, both ready</div>
+      <div class="night-item"><span class="night-dot"></span>Diapers & wipes — always within reach</div>
+      <div class="night-item"><span class="night-dot"></span>Easy on/off onesies or pjs — baby does not need cute uncomfortable outfits tonight</div>
+      <div class="night-item"><span class="night-dot"></span>Swaddle — the right one makes all the difference</div>
+      <div class="night-item"><span class="night-dot"></span>White noise machine — on all night</div>
+      <div class="night-item"><span class="night-dot"></span>Night light — dim enough to not wake baby</div>
+      <div class="night-item"><span class="night-dot"></span>Nursing chair — your comfort matters too</div>
+    </div>
+  </div>
+
+  <!-- SLEEP -->
+  <div class="category">
+    <div class="category-header">
+      <span class="category-emoji">🌙</span>
+      <span class="category-title">Sleep</span>
+      <span class="category-count">6 picks</span>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">💡</div>
+          <div class="product-name">Nursery Night Light — Silicone Stepless Dimming</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Must Have</span>
+          <div class="chelsea-says">"I use this with every single family I work with. Easy to carry, quick to turn on and off, bright enough for night feeds but dim enough to not wake baby fully."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Nursery-Breastfeeding-Silicone-Stepless-Dimming/dp/B09B1B6J9S?linkCode=ll2&tag=confidentbaby-20&linkId=ea3a5d2bed2e88a89195ef567c22b3d9" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🫶</div>
+          <div class="product-name">Caden Lane Receiving Swaddle Blanket</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Must Have</span>
+          <div class="chelsea-says">"My favourite for the early days. The temperature regulating fabric is perfect for newborns and the designs are beautiful."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Caden-Lane-Receiving-Breathable-Temperature-Regulating/dp/B0D31337N9?linkCode=ll2&tag=confidentbaby-20&linkId=ad83df4139c9424c299826e8a7c916f9" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🌀</div>
+          <div class="product-name">Ollie Swaddle — Pediatrician Approved</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Great Pick</span>
+          <div class="chelsea-says">"Perfect for fidgety babies — stays below the shoulder even with the most determined little escape artists."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Ollie-Swaddle-Pediatrician-Approved-Lightweight-Machine-Washable/dp/B0F7TRPVB5?linkCode=ll2&tag=confidentbaby-20&linkId=756df5087599e122094c22b05d71b5db" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--gdl);">🔊</div>
+          <div class="product-name">Hatch Rest & Rest+ Sound Machine</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have gd">Sleep Essential</span>
+          <div class="chelsea-says">"A must have for my bedtime routines. Babies love the noise — it reminds them of the womb. App control means you can adjust without entering the room."</div>
+          <a class="buy-btn gd" href="https://www.amazon.com/Hatch-Baby-Machine-Registry-Essential/dp/B0FL4HDKH7?linkCode=ll2&tag=confidentbaby-20&linkId=4d58d69254bcd6fc7fea1cf0d2c875dac" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🛏️</div>
+          <div class="product-name">Newton Baby Essential Bassinet</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Sleep Essential</span>
+          <div class="chelsea-says">"Perfect for next to you and easy night feeds. Safe with room to grow and allows you to tend to baby when they are close by. Ultra-breathable mattress for peace of mind."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Newton-Baby-Essential-Bassinet-Ultra-Breathable/dp/B0BSNXWXGY?linkCode=ll2&tag=confidentbaby-20&linkId=8fbbfcd9202c96167d2737902cef5b79" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">📷</div>
+          <div class="product-name">Nanit Smart Baby Monitor</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Must Have</span>
+          <div class="chelsea-says">"A must have — great view of baby, temperature monitoring and so easy to use from your phone. Gives you peace of mind from wherever you are in the house."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Nanit-Smart-Baby-Monitor-Notifications/dp/B0FTSL4FXJ?linkCode=ll2&tag=confidentbaby-20&linkId=13de3fb4d6a20fdd32588c62ee632284" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FEEDING -->
+  <div class="category">
+    <div class="category-header">
+      <span class="category-emoji">🤱</span>
+      <span class="category-title">Feeding & Pumping</span>
+      <span class="category-count">10 picks</span>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🧺</div>
+          <div class="product-name">Comfy Cubs Muslin Burp Cloths</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Must Have</span>
+          <div class="chelsea-says">"You can never have enough muslin. Perfect size, come in lots of colours — great for having all around the house."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Comfy-Cubs-Washcloths-Essentials-Multicolor/dp/B0CLPGQWNB?linkCode=ll2&tag=confidentbaby-20&linkId=8a33643a495bb2a4a01aa20651f08f3d" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🫙</div>
+          <div class="product-name">Collapsible Draining Basin for Bottles</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Organisation Essential</span>
+          <div class="chelsea-says">"A must have for keeping bottles and pump parts separate. Love that it drains and it's a great size for a busy kitchen counter."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/FOSJGO-Collapsible-Multiuse-Foldable-Vegetable/dp/B07PBR2YMZ?linkCode=ll2&tag=confidentbaby-20&linkId=cbc994413a689f33ae836da881afa883" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🤱</div>
+          <div class="product-name">Haakaa Silicone Breast Milk Collector</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Breastfeeding Essential</span>
+          <div class="chelsea-says">"Great for breastfeeding moms — lightweight, easy to wash and great suction so you can collect letdown while feeding on the other side."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Suction-Silicone-Phthalate-150ml-Lip/dp/B07G4DZBS5?linkCode=ll2&tag=confidentbaby-20&linkId=3a1bc055398287ef93323c367bdc7bfb" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🔧</div>
+          <div class="product-name">Maymom Backflow Protectors — Spectra Parts</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Pumping Essential</span>
+          <div class="chelsea-says">"If you're pumping, you need to change your parts regularly. These are essential for keeping your pump hygienic and working properly."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Maymom-Backflow-Protector-Original-Accessories/dp/B07R49JCHS?linkCode=ll2&tag=confidentbaby-20&linkId=0697285018df244e2babd3bb654a39d4" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">⚡</div>
+          <div class="product-name">Spectra S1 Plus Breast Pump</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Top Pick</span>
+          <div class="chelsea-says">"Love the Spectra for ease of use. Worth investing in a hospital grade pump for exclusive pumpers — they are coming out with an incredible option."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Spectra-Baby-USA-S1Plus-Cooler/dp/B07VM46YFV?linkCode=ll2&tag=confidentbaby-20&linkId=e3936ee24e68eb7eb67508a2c64ee9f7" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🫙</div>
+          <div class="product-name">Matyz Glass Breast Milk Storage Containers</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Glass Over Plastic</span>
+          <div class="chelsea-says">"I love glass over plastic to reduce microplastics — especially for containers you repeatedly heat up. Worth the switch."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Matyz-Glass-Breast-Storage-Containers/dp/B0C3B24JT9?linkCode=ll2&tag=confidentbaby-20&linkId=569d555ec343bb9d742520a51eff7389" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🧴</div>
+          <div class="product-name">Dapple Baby Bottle & Dish Soap</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Clean Pick</span>
+          <div class="chelsea-says">"A great fragrance-free, sulfate-free option for washing bottles and pump parts. Gentle, hypoallergenic and effective."</div>
+          <a class="buy-btn" href="https://www.amazon.com/DAPPLE-Bottle-Fragrance-Sulfate-Free-Hypoallergenic/dp/B07FMTFXM1?linkCode=ll2&tag=confidentbaby-20&linkId=379d2be347f29202eef5250b782241e3" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🧽</div>
+          <div class="product-name">Dr. Brown's Silicone Bottle Brush with Stand</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Hygiene Pick</span>
+          <div class="chelsea-says">"Silicone over sponge every time — sponge brushes harbour bacteria. This one has a stand and cleans brilliantly."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Dr-Browns-Touch-Bottle-Brush/dp/B01K7Z9SFA?linkCode=ll2&tag=confidentbaby-20&linkId=6045db76f10afb1ae89428ab1ed5f18c" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--gdl);">✨</div>
+          <div class="product-name">Baby Brezza Bottle Washer Pro</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have gd">Worth Every Penny</span>
+          <div class="chelsea-says">"YES — I love this. It cleans and sanitises for you and doubles as storage. It has saved me so much time on overnight shifts. A very well used baby product."</div>
+          <a class="buy-btn gd" href="https://www.amazon.com/Baby-Brezza-Official-Detergent-Tablets-Bottle-Washer-Pro/dp/B0CSQSNW62?linkCode=ll2&tag=confidentbaby-20&linkId=6c5a7721dd931b9507dca7e121d19bf1" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🍼</div>
+          <div class="product-name">Momcozy Bottle Warmer with Night Light</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Night Feed Essential</span>
+          <div class="chelsea-says">"The night light and ease of use make this perfect for those 3am feeds. Warms accurately without destroying nutrients."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Momcozy-Accurate-Temperature-Nutrients-Breastmilk/dp/B0BY26RDWQ?linkCode=ll2&tag=confidentbaby-20&linkId=1bf2c86084dc26b483fd2f8d72ab00b9" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BATH -->
+  <div class="category">
+    <div class="category-header">
+      <span class="category-emoji">🛁</span>
+      <span class="category-title">Bath Time</span>
+      <span class="category-count">5 picks</span>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🪭</div>
+          <div class="product-name">Momcozy Hooded Baby Towel</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Must Have</span>
+          <div class="chelsea-says">"A must have — you need to cover their head quickly after a bath. Keeps baby warm and cosy while you dry and dress them."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Momcozy-Hooded-PackBaby-Original-Toddler/dp/B0CKXKR1RV?linkCode=ll2&tag=confidentbaby-20&linkId=3f5ba907fbd670878f8b298df94ab62d" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🌿</div>
+          <div class="product-name">Tubby Todd Baby Bundle</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Clean Beauty Pick</span>
+          <div class="chelsea-says">"I love these products — clean, safe for baby's skin and they smell incredible. Perfect for building a bath routine from day one."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/TUBBY-TODD-Baby-Bundle-Newborn/dp/B0F2JLTZGC?linkCode=ll2&tag=confidentbaby-20&linkId=3638f1f24eb9c2aa76e724f197fad426" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🛁</div>
+          <div class="product-name">Angelcare Baby Bath Support</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Great for Newborns</span>
+          <div class="chelsea-says">"A great bath seat for newborns — supports them safely and comfortably, and great value. Makes bath time so much easier."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Angelcare-Baby-Bath-Support-Grey/dp/B01M6YVW7B?linkCode=ll2&tag=confidentbaby-20&linkId=4d4297693db4eff34cb089062b19dc29" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--gdl);">🌊</div>
+          <div class="product-name">Lalo Bathtime Starter Kit</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have gd">Splurge Pick</span>
+          <div class="chelsea-says">"I love Lalo products — great faucet cover to make bath time safe. Beautiful design and worth it if you want to invest in quality."</div>
+          <a class="buy-btn gd" href="https://www.amazon.com/Lalo-Bathtime-Starter-Kit-Minimalist/dp/B0D4B5GVFF?linkCode=ll2&tag=confidentbaby-20&linkId=dc130946f86c8304c67dfbc68d89c9cc" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🌡️</div>
+          <div class="product-name">Floating Bath Thermometer</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Safety Essential</span>
+          <div class="chelsea-says">"A must have — it's a big anxiety for new parents. This reassures them the temperature is right every single time. 98–100°F is the sweet spot."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Thermometer-Infant-Floating-Safety-Temperature/dp/B073GGVN3Q?linkCode=ll2&tag=confidentbaby-20&linkId=83c07d954eff8800f8a75d32697fa1eb" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BABY CARE & HEALTH -->
+  <div class="category">
+    <div class="category-header">
+      <span class="category-emoji">💊</span>
+      <span class="category-title">Baby Care & Health</span>
+      <span class="category-count">6 picks</span>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🌡️</div>
+          <div class="product-name">Frida Baby Rectal Thermometer</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Must Have</span>
+          <div class="chelsea-says">"Rectal is the most accurate for newborns — fevers in babies matter and this is the gold standard. Every family needs one."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Frida-Baby-Thermometer-Newborns-Eligible/dp/B0823DXJS9?linkCode=ll2&tag=confidentbaby-20&linkId=c6755648f6a197230daf918c21578d01" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🌡️</div>
+          <div class="product-name">Forehead Infrared Thermometer</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">As Baby Grows</span>
+          <div class="chelsea-says">"Perfect for when baby grows — touchless, easy to use and gives a quick reading without disturbing a sleeping baby."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Forehead-Touchless-Infrared-Thermometer-Temperatures/dp/B08NYPPQ85?linkCode=ll2&tag=confidentbaby-20&linkId=bf2ddff4d2e31c97be3b4cf7e3dacb39" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">💅</div>
+          <div class="product-name">Frida Baby NailFrida Electric File</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">No Cut Skin</span>
+          <div class="chelsea-says">"Buffers are a much safer alternative to clippers. Helps nervous and anxious parents trim nails without the fear of cutting skin. A must."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Frida-Baby-Electric-Childrens-Fingernails/dp/B0BV4SXTFZ?linkCode=ll2&tag=confidentbaby-20&linkId=a6c7151eb62ca40f727c1e6c1ebd39a1" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">💨</div>
+          <div class="product-name">Mylicon Infant Gas Drops</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Comfort Essential</span>
+          <div class="chelsea-says">"A must have alongside infant massage and positional support. Babies take in a lot of milk volume and need support to be comfortable."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/MYLICON-Relief-Infants-Babies-Formula/dp/B011EVPAHG?linkCode=ll2&tag=confidentbaby-20&linkId=9b9bdc2d878fd60c21a9ffbd31d6f87e" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">💧</div>
+          <div class="product-name">WaterWipes Sensitive Baby Wipes</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Newborn Essential</span>
+          <div class="chelsea-says">"The purest wipes available — 99.9% water. Perfect for newborn skin in those first weeks before you transition to regular wipes."</div>
+          <a class="buy-btn" href="https://www.amazon.com/WaterWipes-Sensitive-Wipes-Count-Packs/dp/B008KJEYLO?linkCode=ll2&tag=confidentbaby-20&linkId=91fe57fa9a890070fb1fc3b59c669a33" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🌼</div>
+          <div class="product-name">Earth Mama Diaper Balm</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Clean Pick</span>
+          <div class="chelsea-says">"EWG Verified, petroleum-free, organic calendula and shea butter. Clean products protecting baby's gentle skin. Highly rated for good reason."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Diaper-Balm-Baby-Ointment-Lanolin-Free-Cream/dp/B0825WHHGJ?linkCode=ll2&tag=confidentbaby-20&linkId=d47866e5a18c1502b78e7ff3ec644bc3" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DEVELOPMENT -->
+  <div class="category">
+    <div class="category-header">
+      <span class="category-emoji">🧠</span>
+      <span class="category-title">Development & Play</span>
+      <span class="category-count">4 picks</span>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">📖</div>
+          <div class="product-name">Baby's Black & White Contrast Book</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Development Essential</span>
+          <div class="chelsea-says">"Great for baby's development and eyesight during those little wake windows. High contrast images build brain connections from day one."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Babys-Black-White-Contrast-Book/dp/1941325971?linkCode=ll2&tag=confidentbaby-20&linkId=6e9dec9be08068642b85dd518295bb04" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">📖</div>
+          <div class="product-name">Tummy Time High Contrast Book</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Tummy Time Pick</span>
+          <div class="chelsea-says">"High contrast images designed for tummy time — gives baby something engaging to look at and encourages head lifting."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Babys-Tummy-Time-Book-High-Contrast/dp/1958803898?linkCode=ll2&tag=confidentbaby-20&linkId=ed2a656a97183930d4d13ba8c7eda966" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🪞</div>
+          <div class="product-name">Montessori Double-Sided Tummy Time Mirror</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Tummy Time Essential</span>
+          <div class="chelsea-says">"Doubles as a holder for books and contrast cards. Babies are fascinated by their own reflection — makes tummy time much more engaging."</div>
+          <a class="buy-btn" href="https://www.amazon.com/IEATFO-Adjustable-Double-Sided-Montessori-Contrast/dp/B0DPHP6ZGC?linkCode=ll2&tag=confidentbaby-20&linkId=66c81f1db6877cf9c9fd7f496f5b5662" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--gdl);">🎭</div>
+          <div class="product-name">Lovevery Play Mat</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have gd">Splurge Pick</span>
+          <div class="chelsea-says">"Grows with stages — beautiful design and thoughtfully created for development. I love Lovevery. Worth the investment if you can."</div>
+          <a class="buy-btn gd" href="https://www.amazon.com/LOVEVERY-Winning-Stage-Based-Developmental-Activity/dp/B075R8BXXC?linkCode=ll2&tag=confidentbaby-20&linkId=0349560ae6c31b8e0cea28ccaf83d195" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- C-SECTION RECOVERY -->
+  <div class="category">
+    <div class="category-header">
+      <span class="category-emoji">🌸</span>
+      <span class="category-title">C-Section Recovery</span>
+      <span class="category-count">5 picks</span>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--pul);">🛏️</div>
+          <div class="product-name">Orthopedic Wedge Pillow</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have pu">C-Section Essential</span>
+          <div class="chelsea-says">"Perfect to support your position in bed and be gentle on your scar. Can also aid feeding and make you more comfortable during recovery."</div>
+          <a class="buy-btn pu" href="https://www.amazon.com/Ahpmeoa-Orthopedic-Sleeping-Sitting-Elevation/dp/B0DJJBQ8J8?linkCode=ll2&tag=confidentbaby-20&linkId=2666a5fc827d2e015a021bfa66fb7e16" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--pul);">🦾</div>
+          <div class="product-name">Magnetic Grabber/Reacher Tool</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have pu">C-Section Essential</span>
+          <div class="chelsea-says">"Don't bend over — use the grabber. Makes it so much easier to heal your scar when you're not constantly pulling on it reaching for things."</div>
+          <a class="buy-btn pu" href="https://www.amazon.com/GrabRunner-Magnetic-inch%EF%BC%8CStrong-Aluminum-Grabber%EF%BC%88Purple/dp/B08ZJ9YMKZ?linkCode=ll2&tag=confidentbaby-20&linkId=93bf7b18d013965accab16e034d5318b" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🍵</div>
+          <div class="product-name">Traditional Medicinals Peppermint Tea</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Post Surgery Essential</span>
+          <div class="chelsea-says">"Great for wind and gas pain after surgery. Gas can present as shoulder pain post C-section — peppermint tea helps move it. A little known but very effective tip."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Traditional-Medicinals-Organic-Peppermint-Herbal/dp/B0009F3PJ4?linkCode=ll2&tag=confidentbaby-20&linkId=26b2190088a8c42dd9f27a337caf01d4" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--pul);">🛏️</div>
+          <div class="product-name">Bed Rail for Post-Surgery Support</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have pu">C-Section Essential</span>
+          <div class="chelsea-says">"Gives you the support to climb out of bed without pulling on your scar or using your stomach muscles. Game changing in those first days."</div>
+          <a class="buy-btn pu" href="https://www.amazon.com/BigDolphin-Rails-Elderly-Adults-Safety/dp/B0FJ1W7C4V?linkCode=ll2&tag=confidentbaby-20&linkId=306aafc4a6df489ff5fdf6ac93145bd7" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🩹</div>
+          <div class="product-name">Frida Mom Postpartum Belly Band</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Recovery Support</span>
+          <div class="chelsea-says">"Helps you feel supported when moving in those early recovery days. Compression around the abdomen makes every step feel more manageable."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Frida-Mom-Postpartum-Adjustable-Compression/dp/B09QRHY95G?linkCode=ll2&tag=confidentbaby-20&linkId=87887de4cc3de8e48234f633dedda4a3" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GEAR & ORGANISATION -->
+  <div class="category">
+    <div class="category-header">
+      <span class="category-emoji">🧺</span>
+      <span class="category-title">Gear & Organisation</span>
+      <span class="category-count">8 picks</span>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🌀</div>
+          <div class="product-name">Portable Stroller Fan</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Summer Must Have</span>
+          <div class="chelsea-says">"A summer must have. Clips on to anything and keeps baby cool on warm days. Rechargeable and pinch-proof so safe around little ones."</div>
+          <a class="buy-btn" href="https://www.amazon.com/SWEETFULL-Portable-Stroller-Pinch-Proof-Rechargeable/dp/B0GG9LYTJQ?linkCode=ll2&tag=confidentbaby-20&linkId=a30765d1411519fa189fa052218d6407" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🧺</div>
+          <div class="product-name">Portable Diaper Caddy Organiser</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Organisation Essential</span>
+          <div class="chelsea-says">"Great design, portable and so useful to have all essentials around the house. Also great for mom's snacks and drinks — we all need both!"</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/dp/B0CNXKT6S7?linkCode=ll2&tag=confidentbaby-20&linkId=018237efdcff923aab0871c1ac88db01" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--gdl);">🪑</div>
+          <div class="product-name">BabyBjörn Bouncer Bliss</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have gd">Splurge Pick</span>
+          <div class="chelsea-says">"A must have to set baby down safely. Beautiful design, comfortable from newborn to toddler — this one genuinely grows with your family."</div>
+          <a class="buy-btn gd" href="https://www.amazon.com/dp/B0CLVMCHTJ?linkCode=ll2&tag=confidentbaby-20&linkId=2fa11fd635091fd9f24f3df27a2dab74" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">🍼</div>
+          <div class="product-name">OXO Tot Expandable Bottle Drying Rack</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Organisation Pick</span>
+          <div class="chelsea-says">"Everyone loves the grass drying rack — I do not. I love different areas to dry and this is so much easier to clean. Expandable and practical."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/OXO-Tot-Expandable-Drying-Rack/dp/B0FBHCX71S?linkCode=ll2&tag=confidentbaby-20&linkId=da92c944ba1526b936f2c0d1dde5db72" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🩹</div>
+          <div class="product-name">Skip Hop Wipe-Clean Contoured Changing Pad</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Changing Essential</span>
+          <div class="chelsea-says">"Great contoured shape that keeps baby secure and so easy to wipe clean. A practical essential for the changing station."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Skip-Hop-Wipe-Clean-Contoured-Cushioned/dp/B0FQ6YS4LD?linkCode=ll2&tag=confidentbaby-20&linkId=caae78c12df2642005b655773d12d610" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--sgl);">💧</div>
+          <div class="product-name">Biloban Waterproof Bassinet Pad</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have sg">Smart Pick</span>
+          <div class="chelsea-says">"Great for under the bassinet to help with bedding changes and keeping things dry. Use the double sheet trick — pull the top layer and you're back to sleep in seconds."</div>
+          <a class="buy-btn sg" href="https://www.amazon.com/Biloban-Waterproof-Bassinet-Compatible-Breathable/dp/B087TKKK7F?linkCode=ll2&tag=confidentbaby-20&linkId=0a55d3a79fe41d3080926d453bdcbe62" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--gdl);">🤗</div>
+          <div class="product-name">Ergobaby Carrier with Easy Snug Newborn Insert</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have gd">Carrier Must Have</span>
+          <div class="chelsea-says">"So comfortable and easy to use. I have worn both my girls in this — including flying from England to the USA. An absolute lifesaver in the airport and beyond."</div>
+          <a class="buy-btn gd" href="https://www.amazon.com/Ergobaby-Easy-Snug-Infant-Insert/dp/B01ET1L3G0?linkCode=ll2&tag=confidentbaby-20&linkId=8772d8ed8258691f5a9cc25ef143644f" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top">
+          <div class="product-badge" style="background:var(--tcl);">🧣</div>
+          <div class="product-name">Solly Baby Lightweight Wrap</div>
+        </div>
+        <div class="product-body">
+          <span class="must-have">Newborn Days Essential</span>
+          <div class="chelsea-says">"The best wrap for the newborn days. Lightweight, hands-free and keeps baby close while you move around. Perfect for those early weeks when baby just wants to be held."</div>
+          <a class="buy-btn" href="https://www.amazon.com/Solly-Baby-Lightweight-Hands-Free-Essentials/dp/B0DBMTQJY4?linkCode=ll2&tag=confidentbaby-20&linkId=555881001f9c940eeb52c2869793a1c9" target="_blank">Shop on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="site-footer">
+  <p>
+    Confident Baby Sleep Co. · Chelsea Tudhope<br>
+    hello@confidentbabysleepco.com · confidentbabysleepco.com<br><br>
+    * As an Amazon Associate I earn from qualifying purchases. I only recommend products I personally use and genuinely believe in. Your support helps me continue providing free resources to families.
+  </p>
+</div>
+
+</body>
+</html>
