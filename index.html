@@ -158,6 +158,8 @@ footer .footer-location{font-size:11px;color:rgba(255,255,255,.3)}
   .package-header{flex-direction:column;gap:4px;align-items:flex-start}
   .faq-grid,.coming-soon-grid{grid-template-columns:1fr}
   footer{flex-direction:column;gap:8px;padding:20px 28px;text-align:center}
+  .reviews-grid{grid-template-columns:1fr}
+  .reviews-section{padding:50px 24px}
 }
 
 .nav-bar{position:sticky;top:0;z-index:100;background:var(--terracotta);padding:0 40px;display:flex;gap:0;align-items:center;overflow-x:auto;scrollbar-width:none;box-shadow:0 3px 16px rgba(0,0,0,0.2)}
@@ -243,13 +245,21 @@ footer .footer-location{font-size:11px;color:rgba(255,255,255,.3)}
 </section>
 
 <!-- REVIEWS -->
+<style>
+  .reviews-section { background:var(--cream); padding:90px 80px; }
+  .reviews-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:1100px; margin:0 auto 24px; }
+  @media(max-width:768px) {
+    .reviews-section { padding:50px 24px; }
+    .reviews-grid { grid-template-columns:1fr; }
+  }
+</style>
 <div id="reviews"></div>
-<section style="background:var(--cream);padding:90px 80px;">
+<section class="reviews-section">
   <p class="section-label">What parents are saying</p>
   <h2 class="section-heading">Families who trusted me with <em>everything</em></h2>
   <p class="section-body" style="margin-bottom:56px;">These words mean more to me than anything. Every family is different — what they all share is that they deserved support, and they got it. 💛</p>
 
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1100px;margin:0 auto 24px;">
+  <div class="reviews-grid">
 
     <div style="background:white;border:1px solid var(--border);border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:16px;">
       <div style="color:#B8922A;font-size:18px;letter-spacing:2px;">★★★★★</div>
