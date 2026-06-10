@@ -381,7 +381,69 @@ body {
   Thank you for taking the time to fill this in. Everything you share is completely confidential and used only to help me support your family. I'll be in touch shortly to confirm our first night together. 💛 — Chelsea
 </div>
 
-<button class="submit-btn" onclick="alert('Thank you! Chelsea will be in touch shortly. 💛')">Submit Form</button>
+<button class="submit-btn" onclick="submitForm(event)">Submit Form</button>
+
+<script>
+async function submitForm(e) {
+  e.preventDefault();
+
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  // Build a plain object of all fields
+  let data = {};
+  data['_subject'] = 'New Overnight Support Intake Form — Confident Baby Sleep Co.';
+
+  // All text inputs and textareas
+  const inputs = document.querySelectorAll('input, textarea');
+  inputs.forEach((input, i) => {
+    if (input.value.trim()) {
+      // Get the label above it
+      const field = input.closest('.field');
+      const label = field ? field.querySelector('label') : null;
+      const key = label ? label.childNodes[0].textContent.trim().replace(/\s+/g, ' ') : ('Field ' + (i+1));
+      data[key] = input.value.trim();
+    }
+  });
+
+  // All selected option buttons — group by section label
+  document.querySelectorAll('.field').forEach(field => {
+    const selected = field.querySelectorAll('.option-btn.selected');
+    if (selected.length) {
+      const label = field.querySelector('label');
+      const key = label ? label.childNodes[0].textContent.trim().replace(/\s+/g, ' ') : 'Selection';
+      data[key] = Array.from(selected).map(b => b.textContent.trim()).join(', ');
+    }
+  });
+
+  try {
+    const response = await fetch('https://formspree.io/f/xlgvvekg', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      btn.textContent = '✓ Submitted! Chelsea will be in touch shortly. 💛';
+      btn.style.background = '#7A9E7E';
+    } else {
+      btn.textContent = 'Submit Form';
+      btn.disabled = false;
+      alert('Something went wrong: ' + (result.error || 'please email hello@confidentbabysleepco.com directly'));
+    }
+  } catch (err) {
+    btn.textContent = 'Submit Form';
+    btn.disabled = false;
+    alert('Something went wrong — please email hello@confidentbabysleepco.com directly. 💛');
+  }
+}
+</script>
 
 <div class="footer">Confident Baby Sleep Co. · Chelsea Tudhope · hello@confidentbabysleepco.com</div>
 
