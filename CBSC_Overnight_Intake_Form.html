@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overnight Support Intake Form</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Georgia', serif;
+  background: #FAF7F2;
+  color: #2C2420;
+  padding: 28px 20px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center; margin-bottom: 32px;
+  padding-bottom: 20px; border-bottom: 2px solid #C4714A;
+}
+.header h1 { font-size: 26px; font-weight: 300; margin-bottom: 6px; }
+.header p { font-size: 13px; color: #A08878; line-height: 1.6; }
+.header .logo-text { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #C4714A; margin-bottom: 8px; }
+
+.section { margin-bottom: 28px; }
+.section-title {
+  font-size: 11px; font-weight: bold; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #C4714A;
+  margin-bottom: 14px; padding: 8px 12px;
+  background: #FDF0EE; border-radius: 6px;
+  border-left: 3px solid #C4714A;
+}
+
+.field { margin-bottom: 14px; }
+.field label {
+  display: block; font-size: 13px; color: #2C2420;
+  margin-bottom: 5px; font-weight: normal;
+}
+.field label span { color: #C4714A; } /* required star */
+.field input[type="text"],
+.field input[type="date"],
+.field input[type="email"],
+.field input[type="tel"],
+.field input[type="number"],
+.field select,
+.field textarea {
+  width: 100%; padding: 10px 12px;
+  border: 1px solid #DDD5CC; border-radius: 6px;
+  background: white; font-family: Georgia, serif;
+  font-size: 14px; color: #2C2420;
+  outline: none; transition: border-color 0.2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: #C4714A;
+}
+.field textarea { min-height: 80px; resize: vertical; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+/* Radio/checkbox groups */
+.option-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.option-btn {
+  padding: 7px 14px; border-radius: 20px;
+  border: 1px solid #DDD5CC; background: white;
+  font-family: Georgia, serif; font-size: 13px;
+  cursor: pointer; color: #2C2420; transition: all 0.15s;
+}
+.option-btn:hover { border-color: #C4714A; color: #C4714A; }
+.option-btn.selected { background: #C4714A; border-color: #C4714A; color: white; }
+.option-btn.sage.selected { background: #7A9E7E; border-color: #7A9E7E; color: white; }
+
+/* Info box */
+.info-box {
+  background: #E8F2E8; border-radius: 8px;
+  padding: 12px 14px; border-left: 3px solid #7A9E7E;
+  font-size: 13px; line-height: 1.6; margin-bottom: 14px; color: #4A6B4E;
+}
+
+/* Submit */
+.submit-btn {
+  width: 100%; padding: 16px;
+  background: #C4714A; color: white;
+  border: none; border-radius: 8px;
+  font-family: Georgia, serif; font-size: 16px;
+  cursor: pointer; margin-top: 8px;
+  letter-spacing: 0.05em;
+}
+.submit-btn:hover { background: #A85E3A; }
+
+.footer {
+  text-align: center; margin-top: 28px;
+  font-size: 11px; color: #C4B8B0;
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+
+@media print {
+  body { padding: 10px; }
+  .submit-btn { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo-text">Confident Baby Sleep Co.</div>
+  <h1>Overnight Support Intake Form</h1>
+  <p>Thank you for reaching out — I'm so glad you're here. Please fill this in as fully as you can so I can make sure our nights together are as smooth and supportive as possible. There are no right or wrong answers — just honest ones. 💛</p>
+</div>
+
+<!-- ABOUT YOUR FAMILY -->
+<div class="section">
+  <div class="section-title">About Your Family</div>
+
+  <div class="field-row">
+    <div class="field">
+      <label>Parent / Guardian Name(s) <span>*</span></label>
+      <input type="text" placeholder="Full name(s)">
+    </div>
+    <div class="field">
+      <label>Best Phone Number <span>*</span></label>
+      <input type="tel" placeholder="(   )   -    ">
+    </div>
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label>Email Address <span>*</span></label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="field">
+      <label>Home Address <span>*</span></label>
+      <input type="text" placeholder="Street, City, State, Zip">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Is there anything about your family situation I should know? (military family, solo parenting, support network, other children at home, pets etc.)</label>
+    <textarea placeholder="Anything that helps me understand your household and how I can best support you..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>Who else may be present overnight / how would you like me to interact with your partner or support person?</label>
+    <input type="text" placeholder="e.g. Partner works early, please keep noise minimal / Partner happy to be woken if needed">
+  </div>
+</div>
+
+<!-- ABOUT YOUR BABY -->
+<div class="section">
+  <div class="section-title">About Your Baby</div>
+
+  <div class="field-row-3">
+    <div class="field">
+      <label>Baby's Name</label>
+      <input type="text" placeholder="First name">
+    </div>
+    <div class="field">
+      <label>Date of Birth <span>*</span></label>
+      <input type="date">
+    </div>
+    <div class="field">
+      <label>Baby's Age (weeks)</label>
+      <input type="number" placeholder="e.g. 6">
+    </div>
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label>Birth Weight</label>
+      <input type="text" placeholder="lbs / oz">
+    </div>
+    <div class="field">
+      <label>Current Weight & Date Weighed</label>
+      <input type="text" placeholder="lbs / oz — date weighed">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Weight gain — is baby tracking well? Any concerns raised by your pediatrician?</label>
+    <textarea placeholder="e.g. Back to birth weight at 2 weeks, gaining well / Pediatrician monitoring weight, slow gain..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>Any medical conditions, allergies or health concerns I should be aware of?</label>
+    <textarea placeholder="e.g. Reflux, colic, jaundice history, tongue tie, prematurity, NICU stay, any ongoing concerns..."></textarea>
+  </div>
+</div>
+
+<!-- PREGNANCY & BIRTH -->
+<div class="section">
+  <div class="section-title">Pregnancy & Birth</div>
+
+  <div class="field">
+    <label>How was your pregnancy? Anything significant I should know?</label>
+    <textarea placeholder="e.g. Straightforward / Gestational diabetes / Pre-eclampsia / Bedrest / IVF / Loss history / High risk..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>Type of birth</label>
+    <div class="option-group" id="birthType">
+      <div class="option-btn" onclick="toggle(this,'birthType')">Vaginal — unmedicated</div>
+      <div class="option-btn" onclick="toggle(this,'birthType')">Vaginal — with epidural</div>
+      <div class="option-btn" onclick="toggle(this,'birthType')">Planned C-section</div>
+      <div class="option-btn" onclick="toggle(this,'birthType')">Emergency C-section</div>
+      <div class="option-btn" onclick="toggle(this,'birthType')">Assisted (forceps/vacuum)</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>How was your birth experience? Was it what you expected?</label>
+    <textarea placeholder="You don't have to share anything you're not comfortable with — but if your birth was difficult or traumatic, I want to know so I can support you properly..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>How are YOU recovering physically and emotionally?</label>
+    <textarea placeholder="Be honest — this is a safe space. Sleep, pain, mood, anxiety, feeling overwhelmed..."></textarea>
+  </div>
+</div>
+
+<!-- FEEDING -->
+<div class="section">
+  <div class="section-title">Feeding</div>
+
+  <div class="field">
+    <label>Current feeding method <span>*</span></label>
+    <div class="option-group" id="feedMethod">
+      <div class="option-btn" onclick="toggle(this,'feedMethod')">Exclusively breastfeeding</div>
+      <div class="option-btn" onclick="toggle(this,'feedMethod')">Breastfeeding + formula top ups</div>
+      <div class="option-btn" onclick="toggle(this,'feedMethod')">Exclusively pumping</div>
+      <div class="option-btn" onclick="toggle(this,'feedMethod')">Exclusively formula</div>
+      <div class="option-btn" onclick="toggle(this,'feedMethod')">Combination feeding</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>If breastfeeding — how is it going? Any challenges?</label>
+    <textarea placeholder="Latch, supply concerns, pain, nipple damage, engorgement, pumping as well..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>If formula or combination feeding — which formula and what volume per feed?</label>
+    <input type="text" placeholder="e.g. Similac 360 / Enfamil Gentlease — 2oz per feed">
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label>How often is baby feeding?</label>
+      <input type="text" placeholder="e.g. Every 2–3 hours / On demand">
+    </div>
+    <div class="field">
+      <label>How long is each feed?</label>
+      <input type="text" placeholder="e.g. 20–30 mins / 3oz bottle">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Does baby take a bottle? If so — which bottle and any preferences?</label>
+    <input type="text" placeholder="e.g. Dr Brown's / Tommee Tippee / slow flow nipple / refuses bottle...">
+  </div>
+
+  <div class="field">
+    <label>Any feeding concerns I should know about overnight? (reflux, winding difficulties, feeding to sleep)</label>
+    <textarea placeholder="e.g. Needs lots of winding, arches back during feeds, only settles after feeding..."></textarea>
+  </div>
+</div>
+
+<!-- SLEEP & ROUTINE -->
+<div class="section">
+  <div class="section-title">Sleep & Bedtime Routine</div>
+
+  <div class="field">
+    <label>Does baby have a bedtime routine? If so, walk me through it.</label>
+    <textarea placeholder="e.g. Bath at 7pm, feed, white noise, swaddle and into bassinet / No set routine yet..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>What time does baby usually go down for the night?</label>
+    <input type="text" placeholder="e.g. Around 8–9pm / No consistent time yet">
+  </div>
+
+  <div class="field">
+    <label>Where does baby sleep? <span>*</span></label>
+    <div class="option-group" id="sleepLocation">
+      <div class="option-btn" onclick="toggle(this,'sleepLocation')">Bassinet in our room</div>
+      <div class="option-btn" onclick="toggle(this,'sleepLocation')">Crib in own room</div>
+      <div class="option-btn" onclick="toggle(this,'sleepLocation')">Co-sleeper / bedside</div>
+      <div class="option-btn" onclick="toggle(this,'sleepLocation')">Currently co-sleeping</div>
+      <div class="option-btn" onclick="toggle(this,'sleepLocation')">Varies</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Does baby use a swaddle? <span>*</span></label>
+    <div class="option-group" id="swaddle">
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Yes — loves it</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Yes — arms out</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Sometimes</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">No — hates it</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Not yet tried</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>If swaddling — which swaddle do you use?</label>
+    <input type="text" placeholder="e.g. Halo SleepSack / Ollie / muslin wrap / velcro swaddle">
+  </div>
+
+  <div class="field">
+    <label>Does baby use a pacifier? <span>*</span></label>
+    <div class="option-group" id="paci">
+      <div class="option-btn" onclick="toggle(this,'paci')">Yes — settles well with it</div>
+      <div class="option-btn" onclick="toggle(this,'paci')">Yes — but won't keep it in</div>
+      <div class="option-btn" onclick="toggle(this,'paci')">We offer it but baby refuses</div>
+      <div class="option-btn" onclick="toggle(this,'paci')">No — we don't use one</div>
+      <div class="option-btn" onclick="toggle(this,'paci')">Not yet introduced</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>White noise / sound machine?</label>
+    <div class="option-group" id="whiteNoise">
+      <div class="option-btn" onclick="toggle(this,'whiteNoise')">Yes — always on</div>
+      <div class="option-btn" onclick="toggle(this,'whiteNoise')">Sometimes</div>
+      <div class="option-btn" onclick="toggle(this,'whiteNoise')">No</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>What currently settles baby when upset overnight?</label>
+    <textarea placeholder="e.g. Feeding, rocking, being held upright, paci, white noise, motion, skin to skin..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>How many times is baby waking overnight on average?</label>
+    <input type="text" placeholder="e.g. 3–4 times / every 2 hours / unpredictable">
+  </div>
+
+  <div class="field">
+    <label>What has been the biggest overnight challenge so far?</label>
+    <textarea placeholder="Tell me what your hardest nights look like — I want to understand what I'm walking into so I can actually help..."></textarea>
+  </div>
+</div>
+
+<!-- WHAT YOU NEED -->
+<div class="section">
+  <div class="section-title">What You Need From Me</div>
+
+  <div class="field">
+    <label>What does a successful night look like to you? <span>*</span></label>
+    <textarea placeholder="e.g. Uninterrupted sleep for 4–5 hours / Knowing baby is safe and settled / Having someone handle all night feeds / Just not being alone in it..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>Is there anything you specifically want me to do — or not do — overnight?</label>
+    <textarea placeholder="e.g. Please always wake me for breastfeeds / Please handle everything and only wake me if concerned / Don't use the pacifier / Always swaddle..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>Any questions or concerns you want to raise before we start?</label>
+    <textarea placeholder="Nothing is too small — ask away..."></textarea>
+  </div>
+
+  <div class="field">
+    <label>How did you hear about Confident Baby Sleep Co.?</label>
+    <div class="option-group" id="referral">
+      <div class="option-btn sage" onclick="toggle(this,'referral')">Personal referral</div>
+      <div class="option-btn sage" onclick="toggle(this,'referral')">Instagram</div>
+      <div class="option-btn sage" onclick="toggle(this,'referral')">Facebook group</div>
+      <div class="option-btn sage" onclick="toggle(this,'referral')">Google</div>
+      <div class="option-btn sage" onclick="toggle(this,'referral')">Other</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>If referred — who can I thank? 💛</label>
+    <input type="text" placeholder="Name of the person who sent you my way">
+  </div>
+</div>
+
+<div class="info-box">
+  Thank you for taking the time to fill this in. Everything you share is completely confidential and used only to help me support your family. I'll be in touch shortly to confirm our first night together. 💛 — Chelsea
+</div>
+
+<button class="submit-btn" onclick="alert('Thank you! Chelsea will be in touch shortly. 💛')">Submit Form</button>
+
+<div class="footer">Confident Baby Sleep Co. · Chelsea Tudhope · hello@confidentbabysleepco.com</div>
+
+<script>
+function toggle(el, groupId) {
+  const group = document.getElementById(groupId);
+  const isSage = el.classList.contains('sage');
+  // Allow multiple selections for some, single for others
+  const multiSelect = ['feedMethod', 'referral'].includes(groupId);
+  if (!multiSelect) {
+    group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  }
+  el.classList.toggle('selected');
+}
+</script>
+
+</body>
+</html>
