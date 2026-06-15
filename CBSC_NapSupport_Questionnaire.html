@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nap Support Questionnaire</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Georgia', serif;
+  background: #FAF7F2;
+  color: #2C2420;
+  padding: 28px 20px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center; margin-bottom: 28px;
+  padding-bottom: 16px; border-bottom: 2px solid #C4714A;
+}
+.header h1 { font-size: 24px; font-weight: 300; margin-bottom: 4px; }
+.header .sub { font-size: 13px; color: #A08878; margin-bottom: 6px; line-height: 1.6; }
+.header .logo { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #C4714A; }
+
+.intro-box {
+  background: #E8F2E8; border-radius: 8px;
+  padding: 14px 16px; border-left: 3px solid #7A9E7E;
+  font-size: 13px; line-height: 1.7; margin-bottom: 24px; color: #4A6B4E;
+}
+
+.section { margin-bottom: 26px; }
+.section-title {
+  font-size: 11px; font-weight: bold; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #C4714A;
+  margin-bottom: 12px; padding: 8px 12px;
+  background: #FDF0EE; border-radius: 6px;
+  border-left: 3px solid #C4714A;
+}
+
+.q-item {
+  background: white; border-radius: 8px;
+  padding: 14px 16px; margin-bottom: 8px;
+  border-left: 3px solid #EDD8CC;
+}
+.q-item.sage { border-left-color: #7A9E7E; }
+.q-item.gold { border-left-color: #B8922A; }
+.q-item.terracotta { border-left-color: #C4714A; }
+.q-text { font-size: 14px; line-height: 1.6; color: #2C2420; margin-bottom: 6px; }
+.q-note { font-size: 12px; color: #A08878; font-style: italic; line-height: 1.5; margin-bottom: 8px; }
+.q-answer {
+  width: 100%; border: 1px solid #EDD8CC; border-radius: 6px;
+  padding: 8px 10px; font-family: Georgia, serif;
+  font-size: 13px; color: #2C2420; background: #FAF7F2;
+  resize: vertical; min-height: 50px; outline: none;
+}
+.q-answer:focus { border-color: #C4714A; }
+.q-answer.short { min-height: 36px; }
+
+/* Option buttons */
+.option-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.option-btn {
+  padding: 7px 14px; border-radius: 20px;
+  border: 1px solid #DDD5CC; background: white;
+  font-family: Georgia, serif; font-size: 13px;
+  cursor: pointer; color: #2C2420; transition: all 0.15s;
+}
+.option-btn:hover { border-color: #C4714A; color: #C4714A; }
+.option-btn.selected { background: #C4714A; border-color: #C4714A; color: white; }
+
+/* Info card */
+.info-card {
+  background: white; border-radius: 8px;
+  padding: 14px 16px; border-left: 3px solid #7A9E7E;
+  font-size: 13px; line-height: 1.7; margin-bottom: 8px;
+}
+.info-card .tag {
+  display: inline-block; font-size: 10px; font-weight: bold;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 10px; margin-bottom: 6px;
+  background: #E8F2E8; color: #4A6B4E;
+}
+
+/* Submit */
+.submit-btn {
+  width: 100%; padding: 16px;
+  background: #C4714A; color: white;
+  border: none; border-radius: 8px;
+  font-family: Georgia, serif; font-size: 16px;
+  cursor: pointer; margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+.submit-btn:hover { background: #A85E3A; }
+
+.footer {
+  text-align: center; margin-top: 28px;
+  font-size: 11px; color: #C4B8B0;
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">Confident Baby Sleep Co.</div>
+  <h1>Nap Support Questionnaire</h1>
+  <div class="sub">Thank you so much for reaching out. I have a little time to look at what's going on and offer some guidance — please fill this in as fully as you can and I'll come back to you with some thoughts. 💛</div>
+</div>
+
+<div class="intro-box">
+  <strong>A little reassurance before we start:</strong> At 7 weeks, contact napping — where baby will only sleep on you — is completely normal and developmentally appropriate. Your baby is not broken and you have not created a bad habit. But I also know that only napping on you is exhausting and unsustainable, so let's take a look at what's going on and see what we can do. 💛
+</div>
+
+<!-- ABOUT YOU & BABY -->
+<div class="section">
+  <div class="section-title">About You & Baby</div>
+
+  <div class="q-item">
+    <div class="q-text">Your name and baby's name</div>
+    <textarea class="q-answer short" placeholder="Your name / Baby's name"></textarea>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">Baby's date of birth</div>
+    <textarea class="q-answer short" placeholder="e.g. April 28"></textarea>
+  </div>
+
+  <div class="q-item gold">
+    <div class="q-text">Was baby born full term?</div>
+    <div class="q-note">If premature, adjusted age matters more than chronological age for sleep expectations</div>
+    <div class="option-group" id="fullTerm">
+      <div class="option-btn" onclick="toggle(this,'fullTerm')">Yes — full term</div>
+      <div class="option-btn" onclick="toggle(this,'fullTerm')">No — premature</div>
+    </div>
+    <textarea class="q-answer" style="margin-top:8px;" placeholder="If premature — how many weeks early?"></textarea>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">How is feeding going? Breast, formula or combination?</div>
+    <div class="q-note">Feeding and sleep are closely linked at this age</div>
+    <div class="option-group" id="feeding">
+      <div class="option-btn" onclick="toggle(this,'feeding')">Breastfeeding</div>
+      <div class="option-btn" onclick="toggle(this,'feeding')">Formula</div>
+      <div class="option-btn" onclick="toggle(this,'feeding')">Combination</div>
+    </div>
+  </div>
+</div>
+
+<!-- THE NAP SITUATION -->
+<div class="section">
+  <div class="section-title">The Nap Situation</div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">Describe what happens when you try to put baby down for a nap</div>
+    <div class="q-note">Walk me through it — what do you do, what does baby do, what happens next?</div>
+    <textarea class="q-answer" placeholder="e.g. Falls asleep on me, I try to transfer, eyes pop open immediately / Screams as soon as I put them down..."></textarea>
+  </div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">How long does baby sleep when on you?</div>
+    <textarea class="q-answer short" placeholder="e.g. 45 minutes / 1-2 hours / varies"></textarea>
+  </div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">How long does baby sleep when put down — if at all?</div>
+    <textarea class="q-answer short" placeholder="e.g. Wakes immediately / 10-15 minutes / won't go down at all"></textarea>
+  </div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">Where are you putting baby down for naps?</div>
+    <div class="option-group" id="napLocation">
+      <div class="option-btn" onclick="toggle(this,'napLocation')">Bassinet</div>
+      <div class="option-btn" onclick="toggle(this,'napLocation')">Crib</div>
+      <div class="option-btn" onclick="toggle(this,'napLocation')">Moses basket</div>
+      <div class="option-btn" onclick="toggle(this,'napLocation')">Bouncer / swing</div>
+      <div class="option-btn" onclick="toggle(this,'napLocation')">Stroller</div>
+      <div class="option-btn" onclick="toggle(this,'napLocation')">Various</div>
+    </div>
+  </div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">How many naps is baby having in a 24 hour period — on you or otherwise?</div>
+    <textarea class="q-answer short" placeholder="e.g. 4-5 short naps / 3 longer ones / very unpredictable"></textarea>
+  </div>
+</div>
+
+<!-- WAKE WINDOWS & ROUTINE -->
+<div class="section">
+  <div class="section-title">Wake Windows & Daily Rhythm</div>
+
+  <div class="info-card">
+    <div class="tag">Good to know</div>
+    At 7 weeks, wake windows are very short — typically <strong>45–60 minutes</strong> between sleeps. Overtiredness is one of the most common reasons babies fight naps and won't settle when put down. We will look at this closely.
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">How long is baby awake between naps roughly?</div>
+    <div class="q-note">From the time baby wakes to the time you start trying to get them to sleep again</div>
+    <textarea class="q-answer short" placeholder="e.g. About an hour / 30 minutes / I'm not sure / varies"></textarea>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">What does a rough day look like? Walk me through it from morning to bedtime if you can.</div>
+    <div class="q-note">Don't worry if there's no routine yet — just tell me what tends to happen</div>
+    <textarea class="q-answer" placeholder="e.g. Up around 7am, feed, awake for a bit, nap on me, wake, feed again..."></textarea>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">What time does baby usually go down for the night and how many times do they wake?</div>
+    <textarea class="q-answer short" placeholder="e.g. Down at 9pm, wakes 2-3 times / no set bedtime yet"></textarea>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">Does baby show sleepy cues before naps — and do you recognise them?</div>
+    <div class="q-note">e.g. Yawning, staring, fussing, rubbing eyes</div>
+    <div class="option-group" id="cues">
+      <div class="option-btn" onclick="toggle(this,'cues')">Yes — I can read them well</div>
+      <div class="option-btn" onclick="toggle(this,'cues')">Sometimes — hard to tell</div>
+      <div class="option-btn" onclick="toggle(this,'cues')">Not really — baby just cries</div>
+      <div class="option-btn" onclick="toggle(this,'cues')">Not sure what to look for</div>
+    </div>
+  </div>
+</div>
+
+<!-- ENVIRONMENT -->
+<div class="section">
+  <div class="section-title">Sleep Environment</div>
+
+  <div class="q-item">
+    <div class="q-text">Do you use white noise for naps?</div>
+    <div class="option-group" id="whiteNoise">
+      <div class="option-btn" onclick="toggle(this,'whiteNoise')">Yes — always</div>
+      <div class="option-btn" onclick="toggle(this,'whiteNoise')">Sometimes</div>
+      <div class="option-btn" onclick="toggle(this,'whiteNoise')">No</div>
+    </div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">How dark is the room for naps?</div>
+    <div class="option-group" id="darkness">
+      <div class="option-btn" onclick="toggle(this,'darkness')">Very dark — blackout blinds</div>
+      <div class="option-btn" onclick="toggle(this,'darkness')">Dimmed</div>
+      <div class="option-btn" onclick="toggle(this,'darkness')">Normal daylight</div>
+      <div class="option-btn" onclick="toggle(this,'darkness')">Varies</div>
+    </div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">Does baby use a swaddle or pacifier for naps?</div>
+    <div class="option-group" id="swaddle">
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Swaddle — loves it</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Swaddle — hates it</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Pacifier</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Both</div>
+      <div class="option-btn" onclick="toggle(this,'swaddle')">Neither</div>
+    </div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">How do you usually get baby to sleep before attempting a transfer?</div>
+    <div class="option-group" id="settleMethod">
+      <div class="option-btn" onclick="toggle(this,'settleMethod')">Feeding to sleep</div>
+      <div class="option-btn" onclick="toggle(this,'settleMethod')">Rocking</div>
+      <div class="option-btn" onclick="toggle(this,'settleMethod')">Walking / bouncing</div>
+      <div class="option-btn" onclick="toggle(this,'settleMethod')">Paci</div>
+      <div class="option-btn" onclick="toggle(this,'settleMethod')">Just holding</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW ARE YOU -->
+<div class="section">
+  <div class="section-title">How Are You Doing?</div>
+
+  <div class="q-item" style="border-left-color:#8A72A0;">
+    <div class="q-text">How is this affecting you day to day?</div>
+    <div class="q-note">Be honest — this is a safe space</div>
+    <textarea class="q-answer" placeholder="e.g. I can't put baby down at all / I'm exhausted / I feel touched out / I just want 20 minutes to myself..."></textarea>
+  </div>
+
+  <div class="q-item" style="border-left-color:#8A72A0;">
+    <div class="q-text">What would feel like a win to you right now?</div>
+    <div class="q-note">One nap a day in the bassinet? Two hours to yourself? Being able to eat lunch with two hands?</div>
+    <textarea class="q-answer" placeholder="Tell me what success looks like for you right now..."></textarea>
+  </div>
+
+  <div class="q-item" style="border-left-color:#8A72A0;">
+    <div class="q-text">Anything else you'd like me to know?</div>
+    <textarea class="q-answer" placeholder="Anything at all..."></textarea>
+  </div>
+</div>
+
+<button class="submit-btn" onclick="submitForm(event)">Send to Chelsea 💛</button>
+
+<div class="footer">Confident Baby Sleep Co. · Chelsea Tudhope MSc · hello@confidentbabysleepco.com</div>
+
+<script>
+function toggle(el, groupId) {
+  document.getElementById(groupId).querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  let data = {};
+  data['_subject'] = 'Nap Support Questionnaire — Confident Baby Sleep Co.';
+
+  document.querySelectorAll('.q-item').forEach(item => {
+    const question = item.querySelector('.q-text');
+    const answer = item.querySelector('.q-answer');
+    const selected = item.querySelectorAll('.option-btn.selected');
+    if (question) {
+      const key = question.textContent.trim();
+      if (selected.length) {
+        data[key] = Array.from(selected).map(b => b.textContent.trim()).join(', ');
+      }
+      if (answer && answer.value.trim()) {
+        data[key + ' (notes)'] = answer.value.trim();
+      }
+    }
+  });
+
+  try {
+    const response = await fetch('https://formspree.io/f/xlgvvekg', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      btn.textContent = '✓ Sent! Chelsea will be in touch. 💛';
+      btn.style.background = '#7A9E7E';
+    } else {
+      btn.textContent = 'Send to Chelsea 💛';
+      btn.disabled = false;
+      alert('Something went wrong — please email hello@confidentbabysleepco.com directly 💛');
+    }
+  } catch (err) {
+    btn.textContent = 'Send to Chelsea 💛';
+    btn.disabled = false;
+    alert('Something went wrong — please email hello@confidentbabysleepco.com directly 💛');
+  }
+}
+</script>
+
+</body>
+</html>
