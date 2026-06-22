@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexis — Week 3 Check In</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Georgia', serif;
+  background: #FAF7F2;
+  color: #2C2420;
+  padding: 28px 20px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center; margin-bottom: 28px;
+  padding-bottom: 16px; border-bottom: 2px solid #C4714A;
+}
+.header h1 { font-size: 24px; font-weight: 300; margin-bottom: 4px; }
+.header .sub { font-size: 13px; color: #A08878; margin-bottom: 6px; line-height: 1.6; }
+.header .logo { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #C4714A; }
+
+.win-card {
+  background: #E8F2E8; border-radius: 10px;
+  padding: 16px 18px; border: 2px solid #7A9E7E;
+  margin-bottom: 24px; display: flex; gap: 14px; align-items: flex-start;
+}
+.win-icon { font-size: 28px; flex-shrink: 0; }
+.win-text h3 { font-size: 15px; color: #4A6B4E; margin-bottom: 4px; }
+.win-text p { font-size: 13px; color: #4A6B4E; line-height: 1.6; }
+
+.intro-box {
+  background: #FDF5E6; border-radius: 8px;
+  padding: 14px 16px; border-left: 3px solid #B8922A;
+  font-size: 13px; line-height: 1.7; margin-bottom: 24px; color: #6E5848;
+}
+
+.section { margin-bottom: 26px; }
+.section-title {
+  font-size: 11px; font-weight: bold; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #C4714A;
+  margin-bottom: 12px; padding: 8px 12px;
+  background: #FDF0EE; border-radius: 6px;
+  border-left: 3px solid #C4714A;
+}
+
+.q-item {
+  background: white; border-radius: 8px;
+  padding: 14px 16px; margin-bottom: 8px;
+  border-left: 3px solid #EDD8CC;
+}
+.q-item.sage { border-left-color: #7A9E7E; }
+.q-item.gold { border-left-color: #B8922A; }
+.q-item.terracotta { border-left-color: #C4714A; }
+.q-item.purple { border-left-color: #8A72A0; }
+.q-text { font-size: 14px; line-height: 1.6; color: #2C2420; margin-bottom: 6px; }
+.q-note { font-size: 12px; color: #A08878; font-style: italic; line-height: 1.5; margin-bottom: 8px; }
+.q-answer {
+  width: 100%; border: 1px solid #EDD8CC; border-radius: 6px;
+  padding: 8px 10px; font-family: Georgia, serif;
+  font-size: 13px; color: #2C2420; background: #FAF7F2;
+  resize: vertical; min-height: 50px; outline: none;
+}
+.q-answer:focus { border-color: #C4714A; }
+.q-answer.short { min-height: 36px; }
+
+.option-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.option-btn {
+  padding: 7px 14px; border-radius: 20px;
+  border: 1px solid #DDD5CC; background: white;
+  font-family: Georgia, serif; font-size: 13px;
+  cursor: pointer; color: #2C2420; transition: all 0.15s;
+}
+.option-btn:hover { border-color: #C4714A; color: #C4714A; }
+.option-btn.selected { background: #C4714A; border-color: #C4714A; color: white; }
+.option-btn.sage.selected { background: #7A9E7E; border-color: #7A9E7E; }
+
+.info-note {
+  background: #F8F5FB; border-radius: 8px;
+  padding: 12px 14px; border-left: 3px solid #8A72A0;
+  font-size: 12px; line-height: 1.7; color: #6A52A0;
+  margin-bottom: 8px;
+}
+
+.submit-btn {
+  width: 100%; padding: 16px;
+  background: #C4714A; color: white;
+  border: none; border-radius: 8px;
+  font-family: Georgia, serif; font-size: 16px;
+  cursor: pointer; margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+.submit-btn:hover { background: #A85E3A; }
+
+.footer {
+  text-align: center; margin-top: 28px;
+  font-size: 11px; color: #C4B8B0;
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">Confident Baby Sleep Co.</div>
+  <h1>Alexis — Week 3 Check In 💛</h1>
+  <div class="sub">Three weeks in and you are doing brilliantly. Fill this in at your own pace — there are no right or wrong answers.</div>
+</div>
+
+<!-- BIG WIN -->
+<div class="win-card">
+  <div class="win-icon">⭐</div>
+  <div class="win-text">
+    <h3>Aria gained a whole pound! 🎉</h3>
+    <p>Weighed June 19 — one pound gained. That is an incredible result and a reflection of every single feed, every pump, every night you showed up. You should feel so proud. 💛</p>
+  </div>
+</div>
+
+<!-- CLUSTER FEEDING NOTE -->
+<div class="intro-box">
+  <strong>About the cluster feeding:</strong> Cluster feeding — where Aria feeds very frequently and barely makes it 3 hours between feeds — is completely normal at 3 weeks and actually a really positive sign. It is her way of going through a growth spurt and signalling your body to increase supply to match her needs. It is exhausting but it is not a sign that something is wrong or that you don't have enough milk. It will settle. 💛
+</div>
+
+<!-- FEEDING -->
+<div class="section">
+  <div class="section-title">Breastfeeding This Week</div>
+
+  <div class="q-item sage">
+    <div class="q-text">How do feeds feel for you right now?</div>
+    <div class="q-note">Physically and emotionally — both matter</div>
+    <textarea class="q-answer" placeholder="e.g. Getting easier / still uncomfortable / emotional / really enjoying it now..."></textarea>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">How long are feeds lasting on average?</div>
+    <textarea class="q-answer short" placeholder="e.g. 10-15 minutes / shorter / varies a lot"></textarea>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">Is Aria generally settled and content after feeds?</div>
+    <div class="option-group" id="settled">
+      <div class="option-btn" onclick="toggle(this,'settled')">Yes — mostly settled</div>
+      <div class="option-btn" onclick="toggle(this,'settled')">Sometimes</div>
+      <div class="option-btn" onclick="toggle(this,'settled')">Often unsettled</div>
+      <div class="option-btn" onclick="toggle(this,'settled')">Very varied</div>
+    </div>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">Wet and dirty diapers — are you seeing plenty of output each day?</div>
+    <div class="option-group" id="diapers">
+      <div class="option-btn" onclick="toggle(this,'diapers')">Yes — plenty</div>
+      <div class="option-btn" onclick="toggle(this,'diapers')">Seems okay</div>
+      <div class="option-btn" onclick="toggle(this,'diapers')">Not sure</div>
+      <div class="option-btn" onclick="toggle(this,'diapers')">Fewer than expected</div>
+    </div>
+  </div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">How would you describe your supply this week?</div>
+    <div class="option-group" id="supply">
+      <div class="option-btn" onclick="toggle(this,'supply')">Very full and leaking a lot</div>
+      <div class="option-btn" onclick="toggle(this,'supply')">Full but more manageable</div>
+      <div class="option-btn" onclick="toggle(this,'supply')">Starting to feel more settled</div>
+      <div class="option-btn" onclick="toggle(this,'supply')">Worried supply is dropping</div>
+    </div>
+  </div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">Any nipple pain or breast discomfort this week?</div>
+    <div class="option-group" id="pain">
+      <div class="option-btn" onclick="toggle(this,'pain')">Yes — painful</div>
+      <div class="option-btn" onclick="toggle(this,'pain')">A little uncomfortable</div>
+      <div class="option-btn" onclick="toggle(this,'pain')">Much better</div>
+      <div class="option-btn" onclick="toggle(this,'pain')">No pain at all</div>
+    </div>
+    <textarea class="q-answer" style="margin-top:8px;" placeholder="Any details — cracking, blocked ducts, engorgement, specific areas..."></textarea>
+  </div>
+
+  <div class="q-item terracotta">
+    <div class="q-text">Are you pumping at all — or only pumping to relieve discomfort?</div>
+    <div class="option-group" id="pumping">
+      <div class="option-btn" onclick="toggle(this,'pumping')">Not pumping at all now</div>
+      <div class="option-btn" onclick="toggle(this,'pumping')">Only when uncomfortable</div>
+      <div class="option-btn" onclick="toggle(this,'pumping')">Still pumping regularly</div>
+      <div class="option-btn" onclick="toggle(this,'pumping')">Hard to stop pumping</div>
+    </div>
+  </div>
+
+  <div class="q-item gold">
+    <div class="q-text">Is there anything else about breastfeeding you want to share or ask?</div>
+    <textarea class="q-answer" placeholder="Anything at all — questions, concerns, wins, frustrations..."></textarea>
+  </div>
+</div>
+
+<!-- BODY RECOVERY -->
+<div class="section">
+  <div class="section-title">Your Body — Recovery Check</div>
+
+  <div class="q-item">
+    <div class="q-text">How is your C-section scar healing?</div>
+    <div class="option-group" id="scar">
+      <div class="option-btn" onclick="toggle(this,'scar')">Healing well</div>
+      <div class="option-btn" onclick="toggle(this,'scar')">A little tender</div>
+      <div class="option-btn" onclick="toggle(this,'scar')">Sore and uncomfortable</div>
+      <div class="option-btn" onclick="toggle(this,'scar')">Concerned about it</div>
+    </div>
+    <textarea class="q-answer" style="margin-top:8px;" placeholder="Any redness, swelling, discharge or pain at the scar site worth mentioning?"></textarea>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">How is your bleeding / lochia?</div>
+    <div class="option-group" id="bleeding">
+      <div class="option-btn" onclick="toggle(this,'bleeding')">Light and reducing</div>
+      <div class="option-btn" onclick="toggle(this,'bleeding')">Still quite heavy</div>
+      <div class="option-btn" onclick="toggle(this,'bleeding')">Stopped</div>
+      <div class="option-btn" onclick="toggle(this,'bleeding')">Had a sudden increase</div>
+    </div>
+    <div class="q-note" style="margin-top:6px;">If bleeding suddenly increases or you pass large clots — contact your doctor.</div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">Overall — how does your body feel this week?</div>
+    <textarea class="q-answer" placeholder="Energy levels, pain, mobility, anything you are worried about physically..."></textarea>
+  </div>
+</div>
+
+<!-- BABY CARE -->
+<div class="section">
+  <div class="section-title">Baby Care — Little Things</div>
+
+  <div class="q-item gold">
+    <div class="q-text">Have you needed to cut Aria's nails yet — and did you feel confident doing it?</div>
+    <div class="option-group" id="nails">
+      <div class="option-btn" onclick="toggle(this,'nails')">Yes — managed fine</div>
+      <div class="option-btn" onclick="toggle(this,'nails')">Yes — nerve wracking!</div>
+      <div class="option-btn" onclick="toggle(this,'nails')">Not yet — not sure how</div>
+      <div class="option-btn" onclick="toggle(this,'nails')">Using scratch mitts instead</div>
+    </div>
+  </div>
+
+  <div class="q-item gold">
+    <div class="q-text">How is the sling going?</div>
+    <div class="option-group" id="sling">
+      <div class="option-btn" onclick="toggle(this,'sling')">Love it — using it lots</div>
+      <div class="option-btn" onclick="toggle(this,'sling')">Getting the hang of it</div>
+      <div class="option-btn" onclick="toggle(this,'sling')">Haven't used it much</div>
+      <div class="option-btn" onclick="toggle(this,'sling')">Need help with it</div>
+    </div>
+  </div>
+
+  <div class="q-item gold">
+    <div class="q-text">Any other baby care questions — bathing, cord, skin, anything?</div>
+    <textarea class="q-answer" placeholder="Nothing is too small to ask..."></textarea>
+  </div>
+</div>
+
+<!-- HOW ARE YOU -->
+<div class="section">
+  <div class="section-title">How Are You — Really? 💛</div>
+
+  <div class="q-item purple">
+    <div class="q-text">How are you sleeping?</div>
+    <div class="option-group" id="sleep">
+      <div class="option-btn" onclick="toggle(this,'sleep')">Getting some rest</div>
+      <div class="option-btn" onclick="toggle(this,'sleep')">Very broken but coping</div>
+      <div class="option-btn" onclick="toggle(this,'sleep')">Exhausted</div>
+      <div class="option-btn" onclick="toggle(this,'sleep')">Running on empty</div>
+    </div>
+  </div>
+
+  <div class="q-item purple">
+    <div class="q-text">How are you feeling in yourself this week — not about feeding or Aria, about YOU?</div>
+    <div class="q-note">Be as honest as you like. This is a safe space.</div>
+    <textarea class="q-answer" placeholder="e.g. Emotional, anxious, really good actually, struggling, better than last week..."></textarea>
+  </div>
+
+  <div class="q-item purple">
+    <div class="q-text">Are you getting outside at all?</div>
+    <div class="option-group" id="outside">
+      <div class="option-btn" onclick="toggle(this,'outside')">Yes — most days</div>
+      <div class="option-btn" onclick="toggle(this,'outside')">A little</div>
+      <div class="option-btn" onclick="toggle(this,'outside')">Barely</div>
+      <div class="option-btn" onclick="toggle(this,'outside')">Not really</div>
+    </div>
+  </div>
+
+  <div class="q-item purple">
+    <div class="q-text">What has been the hardest part of this week?</div>
+    <textarea class="q-answer" placeholder="Anything at all..."></textarea>
+  </div>
+
+  <div class="q-item purple">
+    <div class="q-text">What has been the best moment of this week?</div>
+    <div class="q-note">There is always one — even in the hardest weeks. 💛</div>
+    <textarea class="q-answer" placeholder="Even something tiny counts..."></textarea>
+  </div>
+</div>
+
+<!-- FEEDBACK -->
+<div class="section">
+  <div class="section-title">How Is the Support Working for You?</div>
+
+  <div class="info-note">
+    Your honest feedback helps me support you better — and helps me improve what I offer to future families. Please be completely honest. 💛
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">How are you finding the level of support and check ins from me?</div>
+    <div class="option-group" id="contactLevel">
+      <div class="option-btn" onclick="toggle(this,'contactLevel')">Just right</div>
+      <div class="option-btn" onclick="toggle(this,'contactLevel')">Could do with more</div>
+      <div class="option-btn" onclick="toggle(this,'contactLevel')">A little too much</div>
+      <div class="option-btn" onclick="toggle(this,'contactLevel')">Hard to keep up with</div>
+    </div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">Was the binder helpful — or was it too much information at one time?</div>
+    <div class="option-group" id="binder">
+      <div class="option-btn" onclick="toggle(this,'binder')">Really useful — referred to it a lot</div>
+      <div class="option-btn" onclick="toggle(this,'binder')">Helpful for some things</div>
+      <div class="option-btn" onclick="toggle(this,'binder')">A little overwhelming</div>
+      <div class="option-btn" onclick="toggle(this,'binder')">Haven't really used it</div>
+    </div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">What has been the most helpful part of our support so far?</div>
+    <textarea class="q-answer" placeholder="e.g. The home visit, the guides, the check ins, the feeding plan, being able to text you..."></textarea>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">Is there anything you wish there was more of — or less of?</div>
+    <textarea class="q-answer" placeholder="More practical help, more emotional support, fewer documents, more face to face time..."></textarea>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">Were the C-section recovery guide and baby product recommendations useful?</div>
+    <div class="option-group" id="csecRecs">
+      <div class="option-btn" onclick="toggle(this,'csecRecs')">Yes — really helpful</div>
+      <div class="option-btn" onclick="toggle(this,'csecRecs')">Some of it</div>
+      <div class="option-btn" onclick="toggle(this,'csecRecs')">Not really</div>
+      <div class="option-btn" onclick="toggle(this,'csecRecs')">Haven't looked yet</div>
+    </div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-text">What has been your most used product in the last 3 weeks?</div>
+    <div class="q-note">Anything — baby or mama related!</div>
+    <textarea class="q-answer short" placeholder="e.g. The Silverettes, the sling, white noise machine, nipple cream..."></textarea>
+  </div>
+</div>
+
+<!-- LOOKING FORWARD -->
+<div class="section">
+  <div class="section-title">Looking Ahead 💛</div>
+
+  <div class="q-item sage">
+    <div class="q-text">As we start to think about day and night cues and a gentle daily rhythm — what feels most important to you right now?</div>
+    <div class="option-group" id="lookingAhead">
+      <div class="option-btn sage" onclick="toggle(this,'lookingAhead')">Longer night stretches</div>
+      <div class="option-btn sage" onclick="toggle(this,'lookingAhead')">More predictable naps</div>
+      <div class="option-btn sage" onclick="toggle(this,'lookingAhead')">A loose daily routine</div>
+      <div class="option-btn sage" onclick="toggle(this,'lookingAhead')">Just getting through each day</div>
+    </div>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">Is there a topic or area of support you would love more information or guidance on in the coming weeks?</div>
+    <textarea class="q-answer" placeholder="e.g. Sleep, introducing a bottle, going back to work, my own recovery, Aria's development..."></textarea>
+  </div>
+
+  <div class="q-item sage">
+    <div class="q-text">Anything else you want to tell me or ask before we move into week 4?</div>
+    <textarea class="q-answer" placeholder="Nothing is too small 💛"></textarea>
+  </div>
+</div>
+
+<button class="submit-btn" onclick="submitForm(event)">Send to Chelsea 💛</button>
+
+<div class="footer">Confident Baby Sleep Co. · Chelsea Tudhope MSc · hello@confidentbabysleepco.com</div>
+
+<script>
+function toggle(el, groupId) {
+  document.getElementById(groupId).querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  let data = {};
+  data['_subject'] = 'Week 3 Check In — Alexis · Confident Baby Sleep Co.';
+
+  document.querySelectorAll('.q-item').forEach(item => {
+    const question = item.querySelector('.q-text');
+    const answer = item.querySelector('.q-answer');
+    const selected = item.querySelectorAll('.option-btn.selected');
+    if (question) {
+      const key = question.textContent.trim();
+      if (selected.length) data[key] = Array.from(selected).map(b => b.textContent.trim()).join(', ');
+      if (answer && answer.value.trim()) data[key + ' (notes)'] = answer.value.trim();
+    }
+  });
+
+  try {
+    const response = await fetch('https://formspree.io/f/xlgvvekg', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (response.ok) {
+      btn.textContent = '✓ Sent! Chelsea will be in touch. 💛';
+      btn.style.background = '#7A9E7E';
+    } else {
+      btn.textContent = 'Send to Chelsea 💛';
+      btn.disabled = false;
+      alert('Something went wrong — please email hello@confidentbabysleepco.com directly 💛');
+    }
+  } catch (err) {
+    btn.textContent = 'Send to Chelsea 💛';
+    btn.disabled = false;
+    alert('Something went wrong — please email hello@confidentbabysleepco.com directly 💛');
+  }
+}
+</script>
+</body>
+</html>
